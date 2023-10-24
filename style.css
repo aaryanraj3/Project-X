@@ -1,0 +1,390 @@
+/* Color Pallete for the Website including for both light & dark theme */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #000a06;
+    --background: #f5fffb;
+    --primary: #130292;
+    --secondary: #feb9d3;
+    --accent: #cde704;
+    --bg: url(circle-scatter-haikei.svg);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #f5fffb;
+    --background: #000a06;
+    --primary: #7e6dfd;
+    --secondary: #46011c;
+    --accent: #e1fb18;
+    --bg: url(circle-scatter-haikei-dark.svg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Poppins';
+  font-weight: 400;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+/* Nav CSS */
+nav {
+  background-color: transparent;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+
+}
+
+nav ul,
+li,
+a {
+  background-color: transparent;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+nav h1 {
+  background-color: transparent;
+  color: white;
+}
+/* Hero section background CSS */
+.partybg {
+  max-width: 100%;
+  height: 700px;
+  background-image: url(./layered-waves-haikei.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.imp-heading {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  font-size: 50px;
+  color: #f5fffb;
+}
+/* Register button CSS */
+.btn {
+  text-align: center;
+  position: relative;
+  background-color: transparent;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.event-btn {
+  border: none;
+  height: 60px;
+  width: 100px;
+  color: var(--background);
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: var(--primary);
+  color: var(--background);
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.partybg>p {
+  color: white;
+}
+/* Countdown CSS */
+#clockdiv {
+  color: hsl(0, 0%, 0%);
+  display: inline-block;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 14%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 30px;
+}
+
+#clockdiv>div {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(17px);
+  --webkit-backdrop-filter: blur(17px) opacity: 0.5;
+  display: inline-block;
+}
+
+#clockdiv div>span {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(17px);
+  --webkit-backdrop-filter: blur(17px);
+  opacity: 0.8;
+  display: inline-block;
+}
+
+.smalltext {
+  padding-top: 5px;
+  font-size: 16px;
+}
+/* Main Section CSS */
+main {
+  margin-top: 15px;
+  height: 100vh;
+}
+
+main h1 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+/* Profile Section CSS */
+.person {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-left: 20px;
+  white-space: nowrap;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  --webkit-overflow-scrolling: touch;
+}
+
+.profile {
+  padding: .75rem;
+  width: 180px;
+  background-image: url('data:image/svg+xml,<svg id="visual" viewBox="0 0 300 300" width="180" height="180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><g transform="translate(177.6722013752853 176.8834193433201)"><path d="M72.5 -83.1C93.2 -51.9 108.6 -25.9 106.7 -1.9C104.8 22.1 85.5 44.2 64.9 60.9C44.2 77.5 22.1 88.8 -8.3 97C-38.7 105.3 -77.3 110.6 -108.1 94C-139 77.3 -162 38.7 -162.2 -0.2C-162.5 -39.1 -139.9 -78.3 -109.1 -109.5C-78.3 -140.8 -39.1 -164.1 -6.6 -157.5C25.9 -150.9 51.9 -114.4 72.5 -83.1" fill="%23cde704"></path></g></svg>');
+  background-repeat: no-repeat;
+  background-size: auto;
+  flex-basis: 180px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  border: 0;
+}
+
+.profile h3,
+h6 {
+  padding-left: 15px;
+}
+
+.pic {
+  width: 100%;
+}
+
+
+.person div {
+  background-color: var(--background);
+  float: none;
+  height: 90%;
+  margin: 0 0.25%;
+  display: inline-block;
+  zoom: 1;
+}
+/* Contact Section CSS */
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Footer Section CSS */
+footer {
+  background-color: var(--background);
+  position: relative;
+  bottom: 0;
+  color: var(--text);
+  width: 100%;
+  text-align: center;
+}
+
+/* Register Form Page CSS starts from here */
+.register-body {
+  background-image: url(./layered-waves-haikei.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-main {
+  font-family: 'Roboto', sans-serif;
+  height: 500px;
+  width: 500px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(17px);
+  --webkit-backdrop-filter: blur(17px) opacity: 0.5;
+}
+
+/* Gallery Section CSS Starts here */
+#gallery {
+  background-image: var(--bg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+
+#gallery .body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#gallery h2 {
+  font-size: 3rem;
+  padding-top: 20px;
+}
+
+.container-gallery {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--text);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(17px);
+  --webkit-backdrop-filter: blur(17px) opacity:0.5;
+  color: white;
+}
+
+.container-gallery h2 {
+  padding-top: 10px;
+}
+
+.container-gallery button {
+  width: 80%;
+  height: 70px;
+  padding: 4px;
+  border-radius: 25px;
+  margin-top: 25px;
+  font-size: 20px;
+  background-color: transparent;
+  color: white;
+}
+
+/* Photo Section CSS from here */
+#photos {
+  width: 100%;
+  height: 100%;
+  background-image: url(circle-scatter-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container-photo {
+  width: 80%;
+  height: 90%;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(17px);
+  --webkit-backdrop-filter: blur(17px) opacity:0.5;
+
+}
+
+.container-photo .top {
+  display: flex;
+  padding: 15px;
+
+}
+
+.top a {
+  padding-left: 10px;
+}
+
+.card-photo {
+  background-color: var(--background);
+  width: 200px;
+  height: 250px;
+  border-radius: 15px;
+
+}
+
+.card-photo img {
+  width: 100%;
+  height: 80%;
+  border-radius: 15px;
+}
+
+.photo-collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* see notes below */
+  grid-auto-rows: minmax(200px, auto);
+  grid-gap: 1rem;
+  margin-left: 2.9rem;
+
+}
+
+.scroll {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 85%;
+
+}
+
+.photo-button {
+  width: 100%;
+  height: 18%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.photo-button button {
+  border-radius: 50%;
+  width: 45px;
+  border: none;
+
+}
+
+.photo-button button i {
+  font-size: 20px;
+  color: white;
+
+}
+
+.photo-button .download {
+  background-color: var(--primary);
+}
+
+.photo-button .like {
+  background-color: var(--secondary);
+}
+/* After liking effect */
+.fa-heart.liked {
+  color: #ff5733;
+  font-weight: 600;
+}
